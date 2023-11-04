@@ -1,0 +1,35 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 0px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 500px;
+  position: relative;
+}
+
+.fixed-form {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.images img {
+  flex: 1;
+  min-width: 200px;
+  max-width: 500px;
+}
