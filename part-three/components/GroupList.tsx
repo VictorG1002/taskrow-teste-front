@@ -79,7 +79,8 @@ const GroupList: React.FC<IGroupListProps> = ({ groupsList, group }) => {
 
         {groupsList
           ? groupsList?.map((group, index) => (
-              <Text
+            <Text
+                key={group.idGrupo}
                 color={
                   userFinded?.some((user) => user.groupName === group.nome)
                     ? 'red'
