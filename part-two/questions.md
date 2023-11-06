@@ -1,6 +1,6 @@
 ## Respostas CSS
 
-- Questions: https://github.com/taskrow/web-frontend-test-2023/blob/main/parte2.md
+- Perguntas: https://github.com/taskrow/web-frontend-test-2023/blob/main/parte2.md
 
 - 1. <p>De todas as formas.</p>
 
