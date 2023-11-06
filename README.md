@@ -59,7 +59,7 @@ $ npm run dev ('run index.ts using bun')
 
 ## 2️⃣  How To Run **Part Two**
 
-Test online <a href="https://victorg1002.github.io/taskrow-teste-front/part-two/images.html">here</a> 
+Test online <a href="https://victorg1002.github.io/taskrow-teste-front/part-two/images.html" target="_blank">here</a> 
 
 ```bash
 # Go into the repository
@@ -73,6 +73,9 @@ open images.html in the browser or on the live server
 ```
 
 ## 3️⃣  How To Run **Part Three**
+
+Test online <a href="https://taskrow-teste-front.vercel.app/" target="_blank">here</a> 
+
 
 ```bash
 # Go into the repository
