@@ -4,12 +4,14 @@ import { useRouter } from 'next/router';
 import { useGlobal } from '@/contexts/global';
 
 import {
+  Box,
   Button,
   Center,
   Grid,
   GridItem,
   HStack,
   Input,
+  Link,
   Text,
   VStack
 } from '@chakra-ui/react';
@@ -63,49 +65,87 @@ const GroupList: React.FC<IGroupListProps> = ({ groupsList, group }) => {
 
   return (
     <Grid templateColumns="repeat(2, 1fr)" gap={6}>
-      <div>
-        <GridItem w="100%" h="10" bg="blue.500" mb={5} />
-
-        <HStack>
+      <Box
+        background={'#E2E8F0'}
+        ml={10}
+        borderRadius={4}
+        height={'50vh'}
+        padding={8}
+        boxShadow={'md'}
+      >
+        <HStack mb={6}>
           <Input
+            boxShadow={'md'}
+            bg={'white'}
             value={user}
             onChange={(e) => setUser(e.target.value)}
             placeholder="coloque o nome do usuario que deseja buscar o grupo"
           />
-          <Button onClick={() => setUserFinded(findUser(user, groups))}>
+          <Button
+            boxShadow={'md'}
+            bg={'#A0AEC0'}
+            onClick={() => setUserFinded(findUser(user, groups))}
+          >
             Buscar
           </Button>
         </HStack>
 
         {groupsList
           ? groupsList?.map((group, index) => (
-            <Text
-                key={group.idGrupo}
-                color={
-                  userFinded?.some((user) => user.groupName === group.nome)
-                    ? 'red'
-                    : 'black'
-                }
-                onClick={() => getGroupById(group)}
-              >{`${'>'.repeat(index)} ${group.nome}`}</Text>
+              <VStack alignItems={'left'}>
+                <Link
+                  key={group.idGrupo}
+                  color={
+                    userFinded?.some((user) => user.groupName === group.nome)
+                      ? '#4299E1'
+                      : '#171923'
+                  }
+                  onClick={() => getGroupById(group)}
+                >
+                  {`${'▸'.repeat(index)} ${group.nome}`}
+                </Link>
+              </VStack>
             ))
           : 'Lista não carregada'}
-      </div>
+      </Box>
 
-      <div>
-        <GridItem w="100%" h="10" bg="blue.500" />
-
+      <Box
+        background={'#E2E8F0'}
+        mr={10}
+        borderRadius={4}
+        height={'50vh'}
+        padding={8}
+        boxShadow={'md'}
+      >
         {group?.nome !== '' ? (
           <VStack>
-            <Text>Nome: {group?.nome}</Text>
-            <h1>Id: {group?.idGrupo}</h1>
+            <Text
+              bg={'#4299E1'}
+              display={'flex'}
+              gap={2}
+              p={2}
+              borderRadius={4}
+              color={'white'}
+              fontWeight={'bold'}
+            >
+              {' '}
+              {group?.nome}
+              <h1>#{group?.idGrupo}</h1>
+            </Text>
+
             <Center>
               <strong>Usuarios</strong>
             </Center>
             <h1>
               {group?.usuarios
                 ? group?.usuarios?.map((usuario, index) => (
-                    <VStack>
+                    <VStack
+                      bg={'#BEE3F8'}
+                      p={2}
+                      borderRadius={4}
+                      mt={2}
+                      color={'#2C5282'}
+                    >
                       <div>{usuario.nome}</div>
                     </VStack>
                   ))
@@ -115,7 +155,7 @@ const GroupList: React.FC<IGroupListProps> = ({ groupsList, group }) => {
         ) : (
           'Nenhum grupo selecionado'
         )}
-      </div>
+      </Box>
     </Grid>
   );
 };

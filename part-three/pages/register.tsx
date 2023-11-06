@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 
 import { Formik } from 'formik';
 
-import { Button, Input, VStack } from '@chakra-ui/react';
+import { Button, Input, Text, VStack } from '@chakra-ui/react';
 import { validaNumeroXpto } from '@/utils/utils';
 
 const REQUIRED_MESSAGE = 'CAMPO OBRIGATORIO';
@@ -39,42 +39,75 @@ const register: React.FC = () => {
       validationSchema={formSchema}
     >
       {({ ...formikData }) => (
-        <VStack display={'flex'} gap={2}>
+        <VStack
+          display={'flex'}
+          background={'#E2E8F0'}
+          ml={10}
+          mr={10}
+          borderRadius={4}
+          height={'50vh'}
+          padding={8}
+          boxShadow={'md'}
+        >
           <form onSubmit={formikData.handleSubmit}>
             <Input
+              mt={2}
+              bg={'white'}
               id="nome"
               name="nome"
               onChange={formikData.handleChange}
               value={formikData.values.nome}
-              placeholder="nome"
+              placeholder="Nome"
             />
-            {formikData.touched.nome &&
-              formikData.errors.nome &&
-              'MIN 3 CARACTERES'}
+
+            {formikData.touched.nome && formikData.errors.nome && (
+              <Text fontSize={12} color={'#E53E3E'} mt={1}>
+                Nome invalido, deve conter no minimo 3 caracteres
+              </Text>
+            )}
 
             <Input
+              mt={2}
+              bg={'white'}
               id="email"
               name="email"
               onChange={formikData.handleChange}
               value={formikData.values.email}
-              placeholder="email"
+              placeholder="Email"
             />
-            {formikData.touched.email &&
-              formikData.errors.email &&
-              'ERRO NO EMAIL'}
+            {formikData.touched.email && formikData.errors.email && (
+              <Text fontSize={12} color={'#E53E3E'} mt={1}>
+                Endereço de email invalido
+              </Text>
+            )}
 
             <Input
+              mt={2}
+              bg={'white'}
               id="numeroXPTO"
               name="numeroXPTO"
               value={formikData.values.numeroXPTO}
               onChange={formikData.handleChange}
-              placeholder="numeroXPTO"
+              placeholder="Numero XPTO"
             />
-            {formikData.touched.numeroXPTO &&
-              formikData.errors.numeroXPTO &&
-              'ERRO NO NUMERO XPTO'}
+            {formikData.touched.numeroXPTO && formikData.errors.numeroXPTO && (
+              <Text fontSize={12} color={'#E53E3E'} mt={1}>
+                Numero XPTO Invalido
+              </Text>
+            )}
 
-            <Button type="submit">Validate</Button>
+            <Button
+              mt={2}
+              type="submit"
+              bg={'#4299E1'}
+               _hover={{bg: '#1A365D'}}
+              p={2}
+              w={100}
+              borderRadius={4}
+              color={'white'}
+            >
+              Validate
+            </Button>
           </form>
         </VStack>
       )}
