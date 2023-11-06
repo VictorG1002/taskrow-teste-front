@@ -70,7 +70,7 @@ const GroupList: React.FC<IGroupListProps> = ({ groupsList, group }) => {
           <Input
             value={user}
             onChange={(e) => setUser(e.target.value)}
-            placeholder="aa"
+            placeholder="coloque o nome do usuario que deseja buscar o grupo"
           />
           <Button onClick={() => setUserFinded(findUser(user, groups))}>
             Buscar

@@ -68,7 +68,7 @@ const register: React.FC = () => {
               name="numeroXPTO"
               value={formikData.values.numeroXPTO}
               onChange={formikData.handleChange}
-              placeholder="aa"
+              placeholder="numeroXPTO"
             />
             {formikData.touched.numeroXPTO &&
               formikData.errors.numeroXPTO &&
