@@ -1,5 +1,7 @@
 ## Respostas CSS
 
+- Questions: https://github.com/taskrow/web-frontend-test-2023/blob/main/parte2.md
+
 - 1. <p>De todas as formas.</p>
 
 - 2. <p> É o que se usa para selecionar os elementos HTML aos quais você deseja aplicar determinados estilos. Seletor de Elemento, Seletor de Classe, Seletor de ID, Seletor de Atributo, Seletor Universal, Seletor de Descendência, Seletor de Adjacência, Seletor de Filho Direto, Seletor de Pseudo-classes e Pseudo-elementos.<p>
@@ -37,7 +39,7 @@
 
 - 7. Adicionar Fontes Externas (Web Fonts): Usar serviços de fontes da web, como o Google Fonts ou Adobe Fonts, para usar fontes personalizadas na página. Isso garante que a fonte seja carregada corretamente em todos os dispositivos.
 
-- 8. **Px:**Um pixel (px) é uma unidade de medida fixa e representa um único ponto em uma tela de computador.
+- 8. **Px:** Um pixel (px) é uma unidade de medida fixa e representa um único ponto em uma tela de computador.
 
      **Em:** Isso define o tamanho da fonte como um múltiplo do tamanho da fonte do elemento pai,se o tamanho da fonte do elemento pai for 16px, então 1em será igual a 16px, 2em será igual a 32px e assim por diante.
 
