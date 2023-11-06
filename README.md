@@ -26,7 +26,7 @@ All instructions and rules for the project are <a href="https://github.com/taskr
 
 ## 🚀 Technologies
 
-This project was developed to compose a portfolio with the following technologies:
+This project was developed for a technical challenge with the following technologies:
 
 -  [json-server](https://www.npmjs.com/package/json-server)
 -  [Bun](https://bun.sh/)
