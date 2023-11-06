@@ -34,7 +34,7 @@ This project was developed to compose a portfolio with the following technologie
 -  [Formik](https://formik.org/docs/overview)
 -  [Yup](https://foxhound87.github.io/mobx-react-form/docs/validation/plugins/YUP/setup.html)
 -  [ChakraUI](https://chakra-ui.com/)
--  [VS Code][vc] 
+-  [VS Code](https://code.visualstudio.com/download)
 
 ## 1️⃣  How To Run **Part One**
 
