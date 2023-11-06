@@ -1,7 +1,5 @@
 import { Link, VStack } from '@chakra-ui/react';
 
-
-
 export default function Home() {
   return (
     <VStack>
@@ -14,7 +12,6 @@ export default function Home() {
         w={350}
         boxShadow={'lg'}
         justifyContent={'center'}
-        href="vggaia@hotmail.com"
         isExternal
         _hover={{ bg: '#1A365D' }}
       >
@@ -48,7 +45,7 @@ export default function Home() {
         justifyContent={'center'}
         href="https://wa.me/5582999222520"
         isExternal
-        _hover={{bg: '#1A365D'}}
+        _hover={{ bg: '#1A365D' }}
       >
         (82) 99922-2520
       </Link>
@@ -64,7 +61,7 @@ export default function Home() {
         justifyContent={'center'}
         href="https://github.com/VictorG1002"
         isExternal
-        _hover={{bg: '#1A365D'}}
+        _hover={{ bg: '#1A365D' }}
       >
         Github
       </Link>
