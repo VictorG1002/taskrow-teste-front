@@ -9,7 +9,5 @@ console.log(numeroXpto.validaNumeroXpto(46387));
 const grupos = new Groups();
 
 grupos.load().then(() => {
-  grupos.search('josé', (gruposEncontrados) => {
-    console.log(gruposEncontrados);
-  });
+  console.log(grupos.search('josé'));
 });
